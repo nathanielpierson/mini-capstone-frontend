@@ -8,6 +8,7 @@ function App() {
   console.log("hello");
 return (
 <div>
+  <OrdersPage />
   <ProductsPage />
   <SignupPage />
   <LoginPage />
