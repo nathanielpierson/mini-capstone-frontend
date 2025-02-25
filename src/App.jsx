@@ -1,18 +1,17 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-import './App.css'
-import { Header } from './Header'
-import { Footer } from './Footer'
-import { ProductsPage } from './ProductsPage'
-import { SignupPage } from './SignupPage'
-import { LoginPage } from './LoginPage'
-import { LogoutLink } from './LogoutLink'
+import "./App.css";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { ProductsPage } from "./ProductsPage";
+import { SignupPage } from "./SignupPage";
+import { LoginPage } from "./LoginPage";
+import { LogoutLink } from "./LogoutLink";
 
 const router = createBrowserRouter([
   {
     element: (
       <div>
-        <Header />
         <Outlet />
         <Footer />
       </div>

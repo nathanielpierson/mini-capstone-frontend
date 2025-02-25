@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function SignupPage() {
   const [errors, setErrors] = useState([]);
@@ -23,6 +24,7 @@ export function SignupPage() {
 
   return (
     <div id="signup">
+      <Link to="/">Home</Link>
       <h1>Signup</h1>
       <ul>
         {errors.map((error) => (
@@ -40,7 +42,8 @@ export function SignupPage() {
           Password: <input name="password" type="password" />
         </div>
         <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+          Password confirmation:{" "}
+          <input name="password_confirmation" type="password" />
         </div>
         <button type="submit">Signup</button>
       </form>

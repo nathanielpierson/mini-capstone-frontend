@@ -4,5 +4,7 @@ import { OrdersNew } from "./OrdersNew"
 
 
 export function OrdersPage() {
-
+  return (
+  <p>orders will be here</p>
+  )
 }
