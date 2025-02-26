@@ -4,6 +4,7 @@ import "./App.css";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ProductsPage } from "./ProductsPage";
+import { TechProductsPage } from "./TechProductsPage";
 import { SignupPage } from "./SignupPage";
 import { LoginPage } from "./LoginPage";
 import { LogoutLink } from "./LogoutLink";
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "/",
+        path: "/home",
         element: <ProductsPage />,
       },
       {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: ".home/tech",
+        element: <TechProductsPage />,
       },
     ],
   },

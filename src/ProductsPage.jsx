@@ -1,4 +1,3 @@
-//child of App.jsx
 import { Header } from "./Header";
 import { ProductsIndex } from "./ProductsIndex";
 import { ProductsNew } from "./ProductsNew";
@@ -9,12 +8,9 @@ export function ProductsPage() {
   const [products, setProducts] = useState([]);
   const handleIndex = () => {
     axios.get("http://localhost:3000/products.json").then(function (response) {
-      // handle success
-      console.log("inside the .then");
       console.log(response.data);
       setProducts(response.data);
     });
-    console.log("after the .then");
   };
 
   const handleCreate = (params, successCallback) => {

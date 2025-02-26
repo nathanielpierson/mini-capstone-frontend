@@ -1,7 +1,7 @@
 export function ProductsIndex({ products }) {
   return (
     <div>
-      <h1>All produx ({products.length} total)</h1>
+      <h1>All products ({products.length} total)</h1>
       {products.map((product) => (
         <div key={product.id}>
           <h2>{product.name}</h2>
