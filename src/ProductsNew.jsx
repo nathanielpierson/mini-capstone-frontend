@@ -1,17 +1,23 @@
-export function ProductsNew({ onCreate }) {
+import axios from "axios";
 
-  const handleSubmit = (event) => {
+export function ProductsNew({ onCreate }) {
+  const handleCreate = (event) => {
     event.preventDefault();
-     const form = event.target;
-     const params = new FormData(form);
-     const successCallback = () => form.reset();
-     onCreate(params, successCallback);
+    const form = event.target;
+    const params = new FormData(form);
+    const successCallback = () => form.reset();
+    onCreate(params, successCallback);
+    axios
+      .post("http://localhost:3000/products.json", params)
+      .then((response) => {
+        console.log(response.data);
+      });
   };
 
   return (
     <div>
       <h1>New Product</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleCreate}>
         <div>
           Name: <input name="name" type="text" />
         </div>
@@ -25,7 +31,7 @@ export function ProductsNew({ onCreate }) {
           Supplier ID: <input name="supplier_id" type="text" />
         </div>
         <button type="submit">Create</button>
-        </form>
+      </form>
     </div>
   );
 }
