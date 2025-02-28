@@ -13,7 +13,6 @@ export function ProductsIndex({ products, images }) {
           <p>description: {product.description}</p>
         </div>
       ))}
-      <h2>WHERE ARE MY IMAGES AAAAAAAAAAH</h2>
       {images.map((image) => (
         <div key={image.id}>
           <p>h</p>
